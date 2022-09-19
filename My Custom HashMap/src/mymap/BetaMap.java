@@ -1,6 +1,6 @@
-package runner;
-import mymap.BMap;
-public class TestBMap<K,V> {
+package mymap;
+
+public class BetaMap<K,V> {
 	static int size = 10;
 	int index;
 	private  BMap<K,V>[] map = new BMap[size];
@@ -51,7 +51,6 @@ public class TestBMap<K,V> {
 		int index = getIndex(key);
 		Object value = null;
 		BMap<K,V> tmap = map[index];
-		System.out.println("index at push : "+index);
 		while(tmap != null)
 		{
 			if(tmap.getKey().equals(key))
@@ -61,21 +60,6 @@ public class TestBMap<K,V> {
 			tmap = tmap.getNext();
 		}
 		return value;
-	}
-	public static void main(String[] args) {
-
-		TestBMap<String,String> test = new TestBMap<>();
-		test.pushEntry("one","World");
-		test.pushEntry("Two","Eyes");
-		test.pushEntry("one","Zoho");
-		test.pushEntry("Three","Tress");
-		test.pushEntry("Teen", "Students");
-		test.pushEntry("oneZoho", "ZohoDev");
-		System.out.println(test.getValue("one"));
-		System.out.println(test.getValue("Two"));
-		System.out.println(test.getValue("Three"));
-		System.out.println(test.getValue("oneZoho"));
-		System.out.println(test.getValue("Teen"));
 	}
 
 }

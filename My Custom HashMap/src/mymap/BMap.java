@@ -40,8 +40,8 @@ public class BMap<K,V>{
 	public void setNext(BMap<K,V> next) {
 		this.next = next;
 	}
-	public int getHashCode(int hashCode) {
-		return this.hashCode = hashCode;
+	public int getHashCode() {
+		return this.hashCode;
 	}	
 	public String toString()
 	{
